@@ -1,0 +1,33 @@
+.slimScroll {
+	*zoom: 1;
+}
+.slimScrollBar {
+	position: relative;
+	margin-left: 3px;
+}
+.slimScrollBar:before,
+.slimScrollBar:after {
+	position: absolute;
+	content: '';
+	display: block;
+	border: 7px solid #6d6d6d;
+	border-width: 10px 5px;
+	font-size: 1em;
+	-webkit-transform: scale(0.6);
+	   -moz-transform: scale(0.6);
+	    -ms-transform: scale(0.6);
+	     -o-transform: scale(0.6);
+	        transform: scale(0.6);
+}
+.slimScrollBar:before {
+	top: -6px;
+	border-color: transparent transparent #666666 transparent;
+}
+.slimScrollBar:after {
+	bottom: -6px;
+	border-color: #666666  transparent transparent transparent;
+}
+.slimScrollRail {
+	border-radius: none !important;
+	padding: 0 3px;
+}

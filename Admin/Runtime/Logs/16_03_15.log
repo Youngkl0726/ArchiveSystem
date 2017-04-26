@@ -1,0 +1,48 @@
+[ 2016-03-15T14:36:16+08:00 ] 0.0.0.0 /System/admin.php
+NOTIC: [2] array_walk_recursive() expects parameter 2 to be a valid callback, function 'filter_exp' not found or invalid function name C:\wamp1\www\System\ThinkPHP\Lib\Core\App.class.php 第 56 行.
+NOTIC: [2] array_walk_recursive() expects parameter 2 to be a valid callback, function 'filter_exp' not found or invalid function name C:\wamp1\www\System\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.044164s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.044439s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.118942s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.119192s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.020518s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.018018s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.009995s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.010080s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.059304s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.014092s ]
+INFO: [ view_end ] --END-- [ RunTime:0.014295s ]
+
+[ 2016-03-15T14:36:16+08:00 ] 0.0.0.0 /System/admin.php
+NOTIC: [2] array_walk_recursive() expects parameter 2 to be a valid callback, function 'filter_exp' not found or invalid function name C:\wamp1\www\System\ThinkPHP\Lib\Core\App.class.php 第 56 行.
+NOTIC: [2] array_walk_recursive() expects parameter 2 to be a valid callback, function 'filter_exp' not found or invalid function name C:\wamp1\www\System\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.002429s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002678s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.066510s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.066788s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.020422s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.018012s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.009743s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.010501s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.059321s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.013867s ]
+INFO: [ view_end ] --END-- [ RunTime:0.014076s ]
+
+[ 2016-03-15T14:36:16+08:00 ] 0.0.0.0 /System/admin.php/Index/verify/
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.031540s ]
+INFO: [ route_check ] --END-- [ RunTime:0.033660s ]
+NOTIC: [2] array_walk_recursive() expects parameter 2 to be a valid callback, function 'filter_exp' not found or invalid function name C:\wamp1\www\System\ThinkPHP\Lib\Core\App.class.php 第 56 行.
+NOTIC: [2] array_walk_recursive() expects parameter 2 to be a valid callback, function 'filter_exp' not found or invalid function name C:\wamp1\www\System\ThinkPHP\Lib\Core\App.class.php 第 57 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.003988s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004173s ]
+

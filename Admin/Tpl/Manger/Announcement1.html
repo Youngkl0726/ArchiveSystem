@@ -1,0 +1,25 @@
+<html lang="en">
+    <head>
+    <title>公告</title>
+        <meta charset="utf-8">
+        <link href="__PUBLIC__/css/body.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+    <form method="post" action="__URL__/Announcement">
+    <input type="hidden" name="id" value="{$data.id}">
+    <table border="0" align="center">
+    <tr>
+      <td width="339">
+        {$data.TITLE}
+      </td>
+    </tr>
+    <tr>
+      <td>
+        {$data.CONTENT}
+     </td>
+    </tr>
+    </table>
+    </form>
+    
+    </body>
+</html>

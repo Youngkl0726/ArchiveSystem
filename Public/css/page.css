@@ -1,0 +1,10 @@
+html { overflow-x: hidden; overflow-y: auto; }
+h1 {
+	font-size: 16px;
+	line-height: 2em;
+	border-bottom: 1px solid #874a27;
+	text-align: center;
+}
+h1 , .content {
+	padding: 0 20px 10px 20px;
+}

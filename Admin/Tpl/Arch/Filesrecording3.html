@@ -1,0 +1,165 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<link href="__PUBLIC__/CSS/body.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+#apDiv1 {
+	position:absolute;
+	left:540px;
+	top:155px;
+	width:192px;
+	height:122px;
+	z-index:2;
+	background-color: #999999;
+	font-size: 16px;
+	text-align: left;
+	visibility: hidden;
+}
+#apDiv2 {
+	position:absolute;
+	left:168px;
+	top:1px;
+	width:24px;
+	height:16px;
+	z-index:3;
+	background-color: #666666;
+	visibility: hidden;
+}
+</style>
+<script type="text/javascript">
+function MM_showHideLayers() { //v9.0
+  var i,p,v,obj,args=MM_showHideLayers.arguments;
+  for (i=0; i<(args.length-2); i+=3) 
+  with (document) if (getElementById && ((obj=getElementById(args[i]))!=null)) { v=args[i+2];
+    if (obj.style) { obj=obj.style; v=(v=='show')?'visible':(v=='hide')?'hidden':v; }
+    obj.visibility=v; }
+}
+</script>
+</head>
+
+<body>
+<div id="apDiv1">
+<div id="apDiv2" onclick="MM_showHideLayers('apDiv1','','hide')">×</div>
+  <h4>&nbsp;该案卷及其卷内文件都将被删除,你确定要删除吗？</h4>
+  <table width="192" border="0">
+    <tr>
+      <td width="50%" align="center">确定</td>
+      <td width="73" align="center" onclick="MM_showHideLayers('apDiv1','','hide')">取消</a></td>
+    </tr>
+  </table>
+</div>
+
+
+<form><table width="470" border="0" align="center" cellspacing="1" bgcolor="#000000">
+  <tr>
+    <td width="106" bgcolor="#999999">案卷档号</td>
+    <td colspan="3" bgcolor="#CCCCCC">&nbsp;</td>
+  </tr>
+  <tr>
+    <td bgcolor="#999999">案卷题名</td>
+    <td colspan="3" bgcolor="#CCCCCC">&nbsp;</td>
+  </tr>
+  <tr>
+    <td bgcolor="#999999">案卷主题词</td>
+    <td colspan="3" bgcolor="#CCCCCC">&nbsp;</td>
+  </tr>
+  <tr>
+    <td bgcolor="#999999">保存时间</td>
+    <td width="131" bgcolor="#CCCCCC">&nbsp;</td>
+    <td width="101" bgcolor="#999999">载体类型</td>
+    <td width="119" bgcolor="#CCCCCC">&nbsp;</td>
+  </tr>
+  <tr>
+    <td bgcolor="#999999">页数</td>
+    <td bgcolor="#CCCCCC">&nbsp;</td>
+    <td bgcolor="#999999">规格</td>
+    <td bgcolor="#CCCCCC">&nbsp;</td>
+  </tr>
+  <tr>
+    <td bgcolor="#999999">日期</td>
+    <td bgcolor="#CCCCCC">&nbsp;</td>
+    <td bgcolor="#999999">是否公开</td>
+    <td bgcolor="#CCCCCC">&nbsp;</td>
+  </tr>
+ 
+  <tr>
+    <td bgcolor="#999999">案卷附注</td>
+    <td colspan="3" bgcolor="#CCCCCC">&nbsp;</td>
+  </tr>
+  <tr>
+    <td bgcolor="#999999">案卷提要</td>
+    <td colspan="3" bgcolor="#CCCCCC">&nbsp;</td>
+  </tr>
+  
+  <tr>
+    <td bgcolor="#999999">库房编号</td>
+    <td colspan="3" bgcolor="#CCCCCC">&nbsp;</td>
+  </tr>
+  <tr>
+    <td bgcolor="#999999">缩微号</td>
+    <td colspan="3" bgcolor="#CCCCCC">&nbsp;</td>
+  </tr>
+  <tr>
+    <td bgcolor="#999999">实体分类编号</td>
+    <td colspan="3" bgcolor="#CCCCCC">&nbsp;</td>
+  </tr>
+  <tr>
+    <td height="18" bgcolor="#999999">所属分类</td>
+    <td colspan="3" bgcolor="#CCCCCC">&nbsp;</td>
+  </tr>
+  <tr>
+    <td height="18" bgcolor="#999999">立卷单位</td>
+    <td colspan="3" bgcolor="#CCCCCC">&nbsp;</td>
+  </tr>
+   <tr>
+    <td bgcolor="#999999">创建时间</td>
+    <td bgcolor="#CCCCCC">&nbsp;</td>
+    <td bgcolor="#999999">最后修改时间</td>
+    <td bgcolor="#CCCCCC">&nbsp;</td>
+  </tr>
+</table>
+<table width="366" border="0" align="center">
+  <tr align="center">
+    <td><a href="__URL__/FileModification">修改</a></td>
+    <td><a href="#" onclick="MM_showHideLayers('apDiv1','','show')">删除</a></td>
+    <td><a href="__URL__/Filesrecording2">返回</a></td>
+  </tr>
+</table></form>
+<p>||<strong>卷内文件</strong>||</p>
+<hr width="600" color="#000000" />
+<form><table width="495" border="0" align="center" cellspacing="1" bgcolor="#000000">
+  <tr align="center">
+    <td width="39" bgcolor="#999999">序号</td>
+    <td width="67" bgcolor="#999999">文件编号</td>
+    <td width="51" bgcolor="#999999">责任人</td>
+    <td width="131" bgcolor="#999999">题名</td>
+    <td width="70" bgcolor="#999999">文种</td>
+    
+    <td width="47" bgcolor="#999999">操作</td>
+  </tr>
+  <tr>
+    <td bgcolor="#CCCCCC">
+      <input type="checkbox" name="checkbox" id="checkbox" />1
+      <label for="checkbox"></label>
+    </td>
+    <td bgcolor="#CCCCCC">&nbsp;</td>
+   
+    <td bgcolor="#CCCCCC"><a href="__URL__/FilesModification" target="_self"></a></td>
+    <td bgcolor="#CCCCCC"><a href="__URL__/FilesModification" target="_self">题名1</a></td>
+    <td bgcolor="#CCCCCC">&nbsp;</td>
+    <td bgcolor="#CCCCCC">
+      <input name="button" type="submit" id="button" onclick="MM_showHideLayers('apDiv1','','show')" value="删除" />
+  </td>
+  </tr>
+</table>
+<table width="464" border="0" align="center">
+  <tr align="right">
+    <td><a href="__URL__/FilesAdd">添加</a></td>
+  </tr>
+</table></form>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</body>
+</html>

@@ -1,0 +1,75 @@
+.fl {
+	float: left;
+}
+.fr {
+	float: right;
+}
+.table-contents {
+	position: relative;
+}
+.table-contents .mn {
+	width: 73%;
+	float: right;
+	padding-top: 20px;
+}
+.table-contents .sd {
+	width: 27%;	
+	float: left;
+	text-align: center;
+}
+.table-contents .sd h5 {
+	font-size: 16px;
+	line-height: 56px;
+}
+.table-contents .sd img {
+	margin-bottom: 30px;
+	width: 172px;
+}
+.block-catelog {
+	padding: 0 50px 0 35px;
+	font-size: 14px;
+	line-height: 20px;
+	margin-bottom: 20px;
+}
+.block-catelog li {
+	cursor: pointer;
+	color: #000;
+	margin-bottom: 10px;
+	*zoom: 1;
+}
+.block-catelog li:hover {
+	color: #888;
+}
+.block-catelog h4 {
+	position: relative;
+	font-size: 16px;
+	height: 18px;
+	background-color: #dcdcdc;
+	margin-bottom: 12px;
+}
+.block-catelog h4 span {
+	position: absolute;
+	left: 7px;
+	line-height: 32px;
+	top: -8px;
+	display: inline-block;
+	white-space: nowrap;
+	padding: 0 10px;
+	background-color: #fff;
+	*zoom: 1;
+}
+.block-catelog .page {
+	position: relative;
+}
+.block-catelog .border {
+	height: 10px;
+	border-bottom:  1px dashed #000;
+	margin: 0 2em 0 3.5em;
+}
+.block-catelog li:hover .border {
+	border-color: #888;
+}
+.author {
+	padding-right: 0.5em;
+	background-color: #fff;
+}

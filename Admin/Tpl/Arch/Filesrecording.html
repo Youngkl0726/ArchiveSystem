@@ -1,0 +1,48 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<link href="__PUBLIC__/CSS/body.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+<form><table width="278" height="131" border="0" align="center">
+  <tr>
+    <td width="84" align="right">全宗编号:</td>
+    <td colspan="3">
+      <select name="full_model_num" id="select">
+        <foreach name="arr" item="vo">
+          <option value="{$vo.FULL_MODEL_ID}">{$vo.FULL_MODEL_NAME}</option>
+        </foreach>
+      </select>   
+     <!--  动态实现下拉菜单 -->
+    </td>
+  </tr>
+  <tr>
+    <td align="right">年度:</td>
+    <td colspan="3">
+      <select name="select2" id="select2">
+        <option>2014</option>
+        <option>2013</option>
+        <option>2012</option>
+      </select>
+    </td>
+  </tr>
+  <tr>
+    <td align="right">档号:</td>
+    <td colspan="3">
+      <label for="textfield"></label>
+      <input type="text" name="textfield" id="textfield" />
+</td>
+  </tr>
+  <tr align="center">
+    <td width="84"><a href="__URL__/Filesrecording2" target="_self"></a></td>
+   
+    <td width="40"><a href="__URL__/Filesrecording2" target="_self"><button type="button">继续</button></a></td>
+    <td width="24">&nbsp;</td>
+  </tr>
+</table></form>
+</body>
+</html>

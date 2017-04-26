@@ -1,0 +1,163 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<link href="__PUBLIC__/CSS/body.css" rel="stylesheet" type="text/css" />
+<script language="javascript" type="text/javascript" src="__PUBLIC__/MyDatePicker/WdatePicker.js"></script>
+</head>
+
+<script language="javascript" type="text/javascript">
+        function ValidateNumber(e, pnumber){
+        if (!/^\d+$/.test(pnumber)){
+          e.value = /^\d+/.exec(e.value);}
+          return false;
+        } 
+
+        function check(fileForm){
+        if(fileForm.arch_code.value.length==0){
+         alert("档号不能为空");
+         return false;
+        }
+        if(fileForm.arch_name.value.length==0){
+         alert("档案题名不能为空");
+         return false;
+        }
+        return true;
+        }
+
+</script>
+
+<body>
+
+<form action="__URL__/FileSave" method="post" name="filedForm" onsubmit ="return check(this);">
+  <table width="500" border="0" align="center">
+    <center>*为必填</center>
+
+    <tr>
+    <td width="100" align="right">全宗编号:</td>
+    <td colspan="2">
+      <select name="full_model_num" id="select">
+        <foreach name="arr" item="vo">
+          <option value="{$vo.FULL_MODEL_ID}" <if condition="($data['FULL_MODEL_NUM'] eq $vo['FULL_MODEL_NUM'])">selected</if>>{$vo.FULL_MODEL_NUM}</option>
+        </foreach>
+      </select> </td></tr>
+
+  <tr>
+    <td width="33%" align="right">档号:</td>
+    <td width="33%"><input type ="text" name="arch_code" id="archcode" value="{$data['ARCH_CODE']}" onkeyup="return ValidateNumber(this,value)"/>
+     <span class="error">*<?php echo $nameErr;?></span>
+    </td>
+  </tr>
+  <tr>
+    <td align="right">档案题名:</td>
+    <td>
+      <textarea style="width:300px;height:70px;resize:none;" name="arch_name" id="archname">{$data['ARCH_NAME']}</textarea><span class="error">*<?php echo $nameErr;?></span>
+  </td>
+  </tr>
+  
+  <tr>
+    <td width="100" align="right">主题词编号:</td>
+    <td colspan="2">
+      <select name="keyword_num" id="select">
+        <foreach name="keyw" item="po">
+          <option value="{$po.KEYWORD_ID}" <if condition="($data['KEYWORD_NUM'] eq $vo['KEYWORD_NUM'])">selected</if>>{$po.KEYWORD_NUM}</option>
+        </foreach>
+      </select> </td></tr>
+
+  <tr>
+    <td align="right">保存时间:</td>
+    <td colspan="2">
+      <select name="preserv_peroid_time" id="select">
+        <foreach name="pret" item="vo">
+          <option value="{$vo.PRESERV_PEROID_ID}" <if condition="($data['PRESERV_PEROID_NAME'] eq $vo['PRESERV_PEROID_NAME'])">selected</if>>{$vo.PRESERV_PEROID_NAME}</option>
+        </foreach>
+      </select> 
+   </td>
+  </tr>
+
+
+  <tr>
+    <td align="right">载体类型:</td>
+    <td colspan="2">
+      <select name="media_type_name" id="select">
+        <foreach name="array" item="vo">
+          <option value="{$vo.MEDIA_TYPE_ID}" <if condition="($data['MEDIA_TYPE_NAME'] eq $vo['MEDIA_TYPE_NAME'])">selected</if>>{$vo.MEDIA_TYPE_NAME}</option>
+        </foreach>
+      </select> 
+   </td>
+  </tr>
+
+
+  <tr>
+    <td align="right">数量:</td>
+    <td><input name="QUANTITY_AND_UNIT" type="number" id="textfield14" size="5" min="0" value="{$data['QUANTITY_AND_UNIT']}"/></td>
+  </tr>
+ 
+  <tr>
+    <td align="right">日期:</td>
+    <td><input class="Wdate" type="text" name="ARCH_TIME" id="archtime" onClick="WdatePicker()" value="{$data['ARCH_TIME']}"> 
+      <!-- <input type="text" name="ARCH_TIME" id="textfield2" /> --></td>
+  </tr>
+ 
+  <tr>
+    <td align="right">档案附注:</td>
+    <td><textarea style="width:300px;height:70px;resize:none;" name="ARCH_MEMO" id="archmemo">{$data['ARCH_MEMO']}</textarea>
+    </td></tr>
+
+
+  <tr>
+    <td align="right">档案提要:</td>
+    <td><textarea style="width:300px;height:70px;resize:none;" name="ARCH_SUMMARY" id="archsummary">{$data['ARCH_SUMMARY']}</textarea>
+    </td></tr>
+  
+  <tr>
+    <td align="right">库房:</td>
+    <td colspan="2">
+      <select name="storeroom_name" id="select">
+        <foreach name="store" item="vo">
+          <option value="{$vo.STOREROOM_ID}" <if condition="($data['STOREROOM_NAME'] eq $vo['STOREROOM_NAME'])">selected</if>>{$vo.STOREROOM_NAME}</option>
+        </foreach>
+      </select> 
+   </td>
+  </tr>
+
+
+  <tr>
+    <td align="right">缩微号:</td>
+    <td><input type="text" name="MICROCOPY_CODE" id="textfield6" value="{$data['MICROCOPY_CODE']}" onkeyup="return ValidateNumber(this,value)"/></td>
+  </tr>
+
+ 
+  <tr>
+    <td align="right">是否公开：</td>
+    <td><select name="select4" id="select4">
+      <option value="0" <if condition="($data['IS_PUBLIC'] eq 0)">selected</if>>不公开</option>
+      <option value="1" <if condition="($data['IS_PUBLIC'] eq 1)">selected</if>>公开
+      </option>
+
+    </select></td>
+  </tr>
+
+  <tr>
+    <td align="right">所属分类:</td>
+    <td colspan="2">
+      <select name="entity_name" id="select">
+        <foreach name="ent" item="vo">
+           <option value="{$vo.ENTITY_ID}" <if condition="($data['ENTITY_NAME'] eq $vo['ENTITY_NAME'])">selected</if>>{$vo.ENTITY_NAME}</option>
+        </foreach>
+      </select> 
+   </td>
+  </tr>
+</table>
+<input type="hidden" name="ids" value="{$data['SEQID']}">
+    <table width="200" border="0" align="center">
+      <tr align="center">
+        <td><input type="submit" value="保存"></td>
+      
+        <td><input type="button" value="返回" onclick="window.location.href='__URL__/FilesInformation/id/{$data['SEQID']}'"></td>
+      </tr>
+    </table>
+</form>
+</body>
+</html>

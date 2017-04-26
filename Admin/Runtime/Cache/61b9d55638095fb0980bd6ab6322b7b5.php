@@ -1,0 +1,171 @@
+<?php if (!defined('THINK_PATH')) exit();?><html>
+<head>
+<title>档案管理系统</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="imagetoolbar" content="no" />
+<!-- <link rel="stylesheet" href="__PUBLIC__/css/layout.css" type="text/css" /> -->
+<link href="__PUBLIC__/css/borrowlayout.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="__PUBLIC__/scripts/jquery-1.4.1.min.js"></script>
+<script type="text/javascript" src="__PUBLIC__/scripts/jquery.slidepanel.setup.js"></script>
+<script type="text/javascript" src="__PUBLIC__/scripts/jquery.cycle.min.js"></script>
+<script type="text/javascript" src="__PUBLIC__/scripts/jquery.cycle.setup.js"></script>
+<script language="javascript" type="text/javascript" src="__PUBLIC__/MyDatePicker/WdatePicker.js"></script>
+<script>
+function command2(){
+    window.location.href="__URL__/userHome";
+  }
+
+function check(){
+  var APP_NAME=document.getElementById("APP_NAME").value;
+  var APP_DEPT=document.getElementById("APP_DEPT").value;
+  var ARCH_NAME=document.getElementById("ARCH_NAME").value;
+  var UTIL_PURPOSE=document.getElementById("UTIL_PURPOSE").value;
+  var UTIL_CONTENT=document.getElementById("UTIL_CONTENT").value;
+  var UTIL_MODE=document.getElementById("UTIL_MODE").value;
+  var CERTIFICATE=document.getElementById("CERTIFICATE").value;
+  var CONTACT_INFO=document.getElementById("CONTACT_INFO").value;
+  var APP_BORROWTIME=document.getElementById("APP_BORROWTIME").value;
+  var APP_RETURNTIME=document.getElementById("APP_RETURNTIME").value;
+
+  if(CERTIFICATE.trim().length!=18){
+    alert("身份证件输入错误");
+    return false;
+  }
+  if(APP_NAME.trim()==""||APP_DEPT.trim()==""||ARCH_NAME.trim()==""||UTIL_PURPOSE.trim()==""||UTIL_CONTENT.trim()==""||UTIL_CONTENT.trim()==""||UTIL_MODE.trim()==""||CERTIFICATE.trim()==""||CONTACT_INFO.trim()==""||APP_BORROWTIME.trim()==""||APP_RETURNTIME.trim()==""){
+    alert("内容不完整，请重新填写");
+    return false;
+  }
+  else return true;
+  }
+function begindate(){
+  var min = document.getElementById("APP_BORROWTIME").value;
+  return min;
+}
+function enddate(){
+  var max = document.getElementById("APP_RETURNTIME").value;
+  return max;
+}
+function nowdate(){
+  var date = new Date();
+  var year = date.getFullYear();
+  var month =date.getMonth()+1;
+  var day = date.getDate()+1; 
+  return year+'-'+month+'-'+day;
+}
+
+</script>
+</head>
+<body>
+<!-- ####################################################################################################### -->
+<div class="wrapper col1">
+  <div id="header">
+    <div id="logo">
+      <h1><a href="__URL__/userHome">档案管理系统</a>    </h1>
+    </div>
+     <div id="topnav">
+      <ul>
+        <li><a href="__URL__/userHome">主页</a></li>
+        <li><a href="__URL__/System">系统简介</a></li>
+         <li class="active"><a href="__URL__/Borrow">用户申请借阅</a></li>
+        <li><a href="javascript:void(0)" onclick="popWin()">申请状态查询</a></li>
+      
+      </ul>
+    </div>
+    <br class="clear" />
+  </div>
+</div>
+<!-- ####################################################################################################### -->
+<form method="post" action="__URL__/borrowInsert">
+<p></p>
+<table width="34%" border="0" align="center">
+  <tr>
+    <td>姓&nbsp&nbsp&nbsp&nbsp名：</td>
+    <td colspan="2">
+      <input name="APP_NAME" type="text" id="APP_NAME" size="39" />
+  </td>
+  </tr>
+  <tr>
+    <td>单&nbsp&nbsp&nbsp&nbsp位：</td>
+    <td colspan="2">
+      <input type="text" name="APP_DEPT" id="APP_DEPT" size="39" />
+    </td>
+  </tr>
+  <tr>
+    <td>档案题名：</td>
+    <td colspan="2">
+      <input name="ARCH_NAME" type="text" id="ARCH_NAME" size="39" />
+  </td>
+  </tr>
+  <tr>
+    <td>利用目的：</td>
+    <td colspan="2">
+      <textarea name="UTIL_PURPOSE" id="UTIL_PURPOSE" cols="35" rows="5"></textarea>
+   </td>
+  </tr>
+  <tr>
+    <td height="73">利用内容：</td>
+    <td colspan="2">
+      <textarea name="UTIL_CONTENT" id="UTIL_CONTENT" cols="35" rows="5"></textarea>
+   </td>
+  </tr>
+  <tr>
+    <td>利用方式：</td>
+    <td colspan="2">
+      <input type="text" name="UTIL_MODE" id="UTIL_MODE" size="39"/>
+   </td>
+  </tr>
+  <tr>
+    <td>身份证件：</td>
+    <td colspan="2">
+      <input type="text" name="CERTIFICATE" id="CERTIFICATE" size="39" onKeypress="if(event.keyCode<45||event.keyCode>57)event.returnValue=false;"/>
+    </td>
+  </tr>
+  <tr>
+    <td>联系方式：</td>
+    <td colspan="2">
+      <input type="text" name="CONTACT_INFO" id="CONTACT_INFO" size="39" onKeypress="if(event.keyCode<45||event.keyCode>57)event.returnValue=false;"/>
+ </td>
+  </tr>
+  <tr>
+    <td>借阅时间：</td>
+    <td colspan="2">
+    <!-- <input class="Wdate" type="text" name="APP_BORROWTIME" id="APP_BORROWTIME" onClick="WdatePicker()">  -->
+<input class="Wdate" type="text" name="APP_BORROWTIME" id="APP_BORROWTIME" onClick="var mindate=nowdate();WdatePicker({minDate:mindate,maxDate:enddate()||'2020-10-01'})">
+    </td>
+  </tr>
+  <tr>
+    <td>归还时间：</td>
+    <td colspan="2">
+    <!-- <input class="Wdate" type="text" name="APP_RETURNTIME" id="APP_RETURNTIME" onClick="WdatePicker()">  -->
+<input class="Wdate" type="text" name="APP_RETURNTIME" id="APP_RETURNTIME" onClick="var date=begindate();WdatePicker({minDate:date||nowdate(),maxDate:'2020-10-01'})"> 
+    </td>
+  </tr>
+</table>
+<tr align="center">
+    
+    <td width="32%"><input type="submit" name="button" id="button" value="提交" onclick="return check()" />
+      &nbsp; 
+      <input type="button" name="button2" id="button2" value="返回" onclick="command2()" /></td>
+    </form>
+  </tr>
+<!-- ####################################################################################################### -->
+ 
+
+
+<div>&nbsp</div><div>&nbsp</div>
+<div class="wrapper col5">
+  <div id="copyright">
+    <p align="center">Copyright &copy; HNU. All Rights Reserved.</p>
+    <br class="clear" />
+  </div>
+</div>
+<script>
+    function popWin(){
+          var win,weigth=300,height=200; 
+          // var theURL="Announcement/id/"+id; 
+          win=window.open("Query.html","winDWL","width="+weigth+",height="+height+",resizable=yes,menubar=yes,toolbar=no,location=no,scrollbars=yes,status=no")       
+          win.moveTo((screen.width-weigth)/2,(screen.height-height)/2);
+      }
+</script>
+</body>
+</html>

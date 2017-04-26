@@ -1,0 +1,45 @@
+body {
+	background-attachment: fixed;
+}
+img {
+	border: 0;
+}
+.logo {
+	margin-bottom: 44px;
+}
+.shelves {
+	width: 712px;
+	/*height: 175px;*/
+	margin: 0 auto;
+	overflow: auto;
+}
+.shelves-row {
+	position: relative;
+	height: 222px;
+	background: url(../pics/shelf.png) no-repeat center bottom;
+}
+.shelves-row .year {
+	position: absolute;
+	left: 30px;
+	top: -2px;
+	display: inline-block;
+	width: 102px;
+	height: 38px;
+	line-height: 38px;
+	text-align: center;
+	font-size: 18px;
+	font-weight: bold;
+	color: #ebbca3;
+	text-shadow: 0 -1px rgba(0,0,0,.7);
+	background: url(../pics/year.png) no-repeat center;
+}
+.list-book {
+	padding-left: 160px;
+}
+.list-book li {
+	display: inline-block;
+	float: left;
+	margin-right: 30px;
+	*display: inline;
+	*zoom: 1;
+}
